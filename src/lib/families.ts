@@ -1,0 +1,212 @@
+export type Family = {
+  slug: string;
+  label: string;
+  cues: string[];
+  signature: string[];
+  fallbackTitle: string;
+  tldr: string;
+  camera: string;
+  light: string;
+  palette: string;
+  typeNote: string;
+  layout: string;
+  motion: string;
+  avoid: string;
+};
+
+export const FAMILIES: Family[] = [
+  {
+    slug: "cinematic-lighting",
+    label: "Cinematic lighting",
+    cues: [
+      "cinematic",
+      "lighting",
+      "portrait",
+      "face",
+      "freckle",
+      "noir",
+      "shadow",
+      "dramatic",
+      "moody",
+      "film",
+      "gaze",
+      "closeup",
+      "spotlight",
+      "chiaroscuro",
+      "lens",
+    ],
+    signature: ["portrait", "soft light", "shallow focus", "film still"],
+    fallbackTitle: "Portrait in soft side light",
+    tldr: "One subject, held in a narrow band of light, with the rest of the frame falling quiet.",
+    camera: "Medium-format portrait, photographed like a film still.",
+    light: "A single soft source from camera left, deep but open shadows, no beauty-dish glare.",
+    palette: "warm skin, cool shadow, one muted accent, almost no pure white",
+    typeNote: "a restrained serif for the headline and a neutral grotesque for everything else",
+    layout: "a large crop with the subject off dead-center and a wide empty margin",
+    motion: "still. If the page moves, only a slow light shift",
+    avoid: "flat even light, stock smiles, neon rims, busy backgrounds",
+  },
+  {
+    slug: "hero-food",
+    label: "Hero food cinematography",
+    cues: [
+      "food",
+      "plate",
+      "plating",
+      "culinary",
+      "dish",
+      "restaurant",
+      "cuisine",
+      "salmon",
+      "asparagus",
+      "herbs",
+      "menu",
+      "dining",
+      "chef",
+      "overhead",
+    ],
+    signature: ["plating", "overhead", "dark table", "herbs"],
+    fallbackTitle: "Hero plate on a dark table",
+    tldr: "The dish is the hero: a dark ground, a precise plate, and light that catches the glaze.",
+    camera: "Overhead and three-quarter food still, commercial but not glossy-catalog.",
+    light: "A hard-ish side light skimming texture, background falling to near black.",
+    palette: "charcoal, bone, herb green, a warm protein tone, cream",
+    typeNote: "a sharp serif for the dish name, small tracked-out sans for the ingredients",
+    layout: "one plate large, caption tight underneath, no card grid competing with the food",
+    motion: "a slow steam or a single light flicker, nothing bouncy",
+    avoid: "bright white tabletops, clip-art herbs, rainbow bowls, centered logos on the plate",
+  },
+  {
+    slug: "quiet-luxury",
+    label: "Quiet luxury",
+    cues: [
+      "luxury",
+      "marble",
+      "gold",
+      "jewelry",
+      "necklace",
+      "pendant",
+      "cashmere",
+      "tailored",
+      "neutral",
+      "ivory",
+      "champagne",
+      "pearl",
+      "boutique",
+      "citrus",
+      "lime",
+    ],
+    signature: ["gold", "studio gray", "still life", "fine chain"],
+    fallbackTitle: "Quiet object on a gray ground",
+    tldr: "A few precise objects, cool gray air, and metal that reads as jewelry rather than hardware.",
+    camera: "Studio still life, tall crop, advertising restraint.",
+    light: "Large soft source, gentle contact shadow, no specular blowout on metal.",
+    palette: "cool gray, gold, one jewel tone, a natural green if the object needs it",
+    typeNote: "a high-contrast serif at a modest size, generous tracking on the small label",
+    layout: "one object column, lots of unused field, type sitting far from the object",
+    motion: "none, or a very slow settle",
+    avoid: "glossy black luxury clichés, purple gradients, crowded product grids, loud sale stickers",
+  },
+  {
+    slug: "energy-movement",
+    label: "Energy & movement",
+    cues: [
+      "motion",
+      "movement",
+      "sport",
+      "dance",
+      "speed",
+      "boots",
+      "stride",
+      "fabric",
+      "wind",
+      "dynamic",
+      "run",
+      "street",
+      "crosswalk",
+      "kinetic",
+    ],
+    signature: ["motion", "street", "saturated color", "crop"],
+    fallbackTitle: "Color caught mid-stride",
+    tldr: "The frame is cropped into the action so color and direction do the talking.",
+    camera: "Daylight street photograph, shutter fast enough to keep the subject sharp.",
+    light: "Open sky, no flash, color left saturated instead of graded teal-orange.",
+    palette: "one loud hue against concrete, asphalt, and white paint",
+    typeNote: "a bold grotesque, tight leading, almost no italics",
+    layout: "full-bleed crop, type over a quiet corner, not over the moving subject",
+    motion: "the photograph already moves; the page should not add parallax",
+    avoid: "motion-blur clichés, lightning bolts, gradient streaks, stock sprinting crowds",
+  },
+  {
+    slug: "editorial-fashion",
+    label: "Editorial fashion",
+    cues: [
+      "fashion",
+      "editorial",
+      "jacket",
+      "runway",
+      "sunglasses",
+      "couture",
+      "wardrobe",
+      "hoodie",
+      "coat",
+      "lookbook",
+      "model",
+      "tailoring",
+      "monochrome",
+      "concrete",
+    ],
+    signature: ["editorial", "monochrome", "outerwear", "concrete"],
+    fallbackTitle: "Editorial crop, concrete ground",
+    tldr: "Wardrobe and crop carry it: graphic outerwear, a hard background, almost no color.",
+    camera: "Fashion editorial, three-quarter or tighter, black and white unless color is the point.",
+    light: "Overcast or north light, contrast pushed in the print, not with a ring light.",
+    palette: "black, white, concrete gray, one material highlight",
+    typeNote: "a fashion grotesque or a didone, used sparingly",
+    layout: "image first, a short credit line, no product-card chrome",
+    motion: "still, like a printed page",
+    avoid: "e-commerce ghost mannequins, drop shadows under cutouts, influencer ring light",
+  },
+  {
+    slug: "organic-modern",
+    label: "Organic modern",
+    cues: [
+      "ceramic",
+      "organic",
+      "sculpture",
+      "clay",
+      "curve",
+      "vessel",
+      "biomorphic",
+      "minimal",
+      "plaster",
+      "stone",
+      "handmade",
+      "gallery",
+      "form",
+      "hollow",
+    ],
+    signature: ["ceramic", "curve", "studio", "hollow form"],
+    fallbackTitle: "White form in a dark studio",
+    tldr: "A single sculptural form, lit so the curve explains itself against a dark ground.",
+    camera: "Gallery documentation, vertical, the object filling the frame without touching the edges.",
+    light: "One hard-soft spotlight, a long shadow, a little dust in the beam.",
+    palette: "chalk white, charcoal, warm gray shadow",
+    typeNote: "a humanist sans, small, never outlined",
+    layout: "object centered with unequal margins, caption as a whisper under the frame",
+    motion: "none",
+    avoid: "terrazzo clichés, fake 3D blobs, pastel gradients, lifestyle props crowded at the base",
+  },
+];
+
+export function familyBySlug(slug: string | undefined | null): Family | undefined {
+  if (!slug) return undefined;
+  const key = slug.trim().toLowerCase();
+  return FAMILIES.find(
+    (family) => family.slug === key || family.label.toLowerCase() === key,
+  );
+}
+
+export function familyLabel(slug: string): string {
+  return familyBySlug(slug)?.label ?? slug;
+}
